@@ -48,11 +48,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (currentScore >= Spawner.spawner.entitiesToSpawn[Level].GetComponent<BadGuyBrain>().pointVal * Spawner.spawner.currSpawnManagerValues.prefabsToSpawn[Level])
+        /*if (currentScore >= Spawner.spawner.entitiesToSpawn[Level].GetComponent<BadGuyBrain>().pointVal * Spawner.spawner.currSpawnManagerValues.prefabsToSpawn[Level])
         {
             currentScore = 0;
             LevelUp();
-        }
+        }*/
     }
 
     public static void FlushEnemy(GameObject enemy){
