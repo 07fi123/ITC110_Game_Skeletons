@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        //No reason to level up at the moment, remove console spam!
         /*if (currentScore >= Spawner.spawner.entitiesToSpawn[Level].GetComponent<BadGuyBrain>().pointVal * Spawner.spawner.currSpawnManagerValues.prefabsToSpawn[Level])
         {
             currentScore = 0;

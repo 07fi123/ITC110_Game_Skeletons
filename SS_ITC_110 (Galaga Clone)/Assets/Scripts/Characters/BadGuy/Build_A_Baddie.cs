@@ -15,15 +15,19 @@ public class Build_A_Baddie : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(this.gameObject.transform.position, badGuyBrain.player.transform.position) <= 2.0f)
+        if (Vector3.Distance(this.gameObject.transform.position, badGuyBrain.player.transform.position) <= 4.0f)
         {
-            Explode();
+            DamagePlayerFromADistanceAndTeleport();
         }
     }
 
-    public void Explode()
+    public void DamagePlayerFromADistanceAndTeleport()
     {
+
+
+        transform.position = transform.position + new Vector3(UnityEngine.Random.Range(-1.0f, 1.0f) * 200 * Time.deltaTime, UnityEngine.Random.Range(-1.0f, 1.0f) * 200 * Time.deltaTime, 0);
         badGuyBrain.player.GetComponent<CharacterBrain>().health--;
-        badGuyBrain.Despawn();
+
     }
 }
+
