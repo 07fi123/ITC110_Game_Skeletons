@@ -2523,9 +2523,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2095995306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cbb4bacad4751f6082d367c556cdd1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d3cd2c378b674dc69eda42c33a01360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterBrain: {fileID: 1764397237}
 --- !u!58 &2095995308
 CircleCollider2D:
   m_ObjectHideFlags: 0
