@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +11,7 @@ public class BadGuyBrain : MonoBehaviour
 
     public int pointVal = 100;
 
-    public enum BadGuyState { Attacking, Idling, Returning  };
+    public enum BadGuyState { Attacking, Idling, Returning,Running  };
     public BadGuyState state;
 
     [SerializeField] private Vector3 homePos;
@@ -28,7 +27,10 @@ public class BadGuyBrain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position == homePos) { state = BadGuyState.Idling; }
+        if(transform.position == homePos) 
+        { 
+            state = BadGuyState.Idling; 
+        }
 
         switch(state)
         {
@@ -62,6 +64,7 @@ public class BadGuyBrain : MonoBehaviour
             Despawn();
         }
     }
+
 
     IEnumerator SeekPlayer()
     {

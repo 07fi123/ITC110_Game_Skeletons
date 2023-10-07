@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterBrain : MonoBehaviour
 {
-    public int health = 3;
+    public int health = 100;
     public Shoot shootScript;
 
     // Update is called once per frame
